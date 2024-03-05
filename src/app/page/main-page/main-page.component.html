@@ -1,0 +1,30 @@
+<div class="main-body">
+  <app-header></app-header>
+  <app-error></app-error>
+
+  <app-large-area
+    title="Главная страница"
+  >
+    <p class="text-black fs-6 break-words overflow-wrap-anywhere">
+      Добро пожаловать на сайт проекта SNOW!
+    </p>
+<!--    <p class="text-black fs-6 break-words overflow-wrap-anywhere">
+      Почему всё Spring да Spring? Почему ни одного Winter? Кажется, это несправедливо.
+      Давайте устраним это недоразумение вместе. Присоединяйтесь к проекту SNOW!
+    </p>-->
+
+    <div *ngIf="!sessionService.isCurrentUserAuthorized()"
+      class="flex flex-row items-center justify-content-around pt-4"
+    >
+      <button
+        class="button-red-very-rounded-narrow"
+        routerLink="/register"
+      >Создать аккаунт</button>
+      <button
+        class="button-red-very-rounded-narrow"
+        routerLink="/login"
+      >Войти в аккаунт</button>
+    </div>
+
+  </app-large-area>
+</div>

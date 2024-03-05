@@ -1,0 +1,28 @@
+.user-profile-image {
+  width: 27px;
+}
+
+.user-row-div {
+  @apply mx-2 py-2 px-2 gap-x-4 inline-flex items-center flex-row;
+}
+.user-row-div:hover {
+  @apply bg-gray-200;
+}
+
+.user-row-div:active {
+  @apply bg-gray-300;
+}
+
+.user-name-email-div {
+  @apply flex text-lg gap-x-2 text-center items-center font-semibold flex-row;
+}
+
+@media (max-width: 720px) {
+  .user-name-email-div {
+    @apply flex text-lg text-center items-center font-semibold flex-col;
+  }
+
+  .user-row-div {
+    @apply py-2 px-4 gap-x-4 inline-flex items-center flex-row mt-2 justify-self-center;
+  }
+}

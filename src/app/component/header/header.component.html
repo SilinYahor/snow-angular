@@ -1,0 +1,27 @@
+<nav class="navigation-menu"
+>
+  <h1>
+    <a routerLink="/" class="text-decoration-none">
+      <span class="font-bold text-4xl text-blue-400">S</span>
+      <span class="font-bold text-4xl text-blue-300">N</span>
+      <span class="font-bold text-4xl text-blue-200">O</span>
+      <span class="font-bold text-4xl text-blue-500">W</span>
+    </a>
+  </h1>
+
+  <div class="menu-items-div"
+  >
+    <a routerLink="/" class="menu-item">Главная</a>
+    <a *ngIf="sessionService.isCurrentUserAdmin()" routerLink="/user-list" class="menu-item">Пользователи</a>
+  </div>
+
+  <div *ngIf="sessionService.isCurrentUserAuthorized()"
+       class="dropdown"
+  >
+    <button class="dropbtn">{{getUserName()}} ▼</button>
+    <div class="dropdown-content">
+      <a *ngIf="sessionService.getUser()" routerLink="/user-profiles">Мой профиль</a>
+      <a href="" (click)="logOut()">Выйти</a>
+    </div>
+  </div>
+</nav>

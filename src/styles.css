@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-body {
+  @apply pb-4 bg-gray-100;
+}
+
+body, html {
+  @apply bg-gray-100;
+  min-height: 100%;
+}
+
+.button-red-rounded {
+  @apply py-2 px-4 rounded bg-red-600 text-white;
+}
+
+.button-red-rounded:hover {
+  @apply bg-red-400;
+}
+
+.button-red-rounded:active {
+  @apply bg-red-600;
+}
+
+.button-back {
+  @apply py-2 pl-5 pr-10 text-white bg-red-800;
+  border-radius: 5px;
+  background-size: cover;
+
+  clip-path: polygon(0% 0%, 95% 0%, 75% 100%, 0% 100%);
+}
+.button-back:hover {
+  background-color: #f19ab1;
+}
+.button-back:active {
+  @apply bg-red-800;
+}
+
+.button-red-very-rounded-narrow {
+  @apply py-1.5 px-7 mx-auto rounded-3xl bg-red-500 text-white;
+}
+
+.button-red-very-rounded-narrow:hover {
+  @apply bg-red-300;
+}
+
+.button-red-very-rounded-narrow:active {
+  @apply bg-red-500;
+}
+
+.blue-bold-link-text {
+  @apply text-blue-500 font-bold;
+  text-decoration: none;
+}
+
+.blue-bold-link-text:hover {
+  @apply text-blue-300 font-bold;
+  text-decoration: none;
+}
+
+.blue-bold-link-text:active {
+  @apply text-blue-600 font-bold;
+  text-decoration: none;
+}
+
+.button-dark {
+  background-color: #3d4c64;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.button-dark:hover {
+  background-color: #000000;
+}
+
+.button-dark:active {
+  background-color: #3d4c64;
+}
+
+.button-back-arrow {
+  border: 1px solid;
+  @apply bg-white text-red-800 font-bold text-4xl rounded-xl px-2 border-red-800;
+  transition: background-color 0.3s;
+}
+
+.button-back-arrow:hover {
+  @apply bg-red-800 text-white;
+}
+
+.button-back-arrow:active {
+  @apply bg-white text-red-800;
+}
+
+.button-in-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-in-table:hover {
+  background-color: #E2E8F0;
+  transform: scale(1.1);
+}
+
+.button-in-table:active {
+  background-color: #CBD5E0;
+  transform: scale(0.95);
+}
+
+.btn-icon {
+  font-size: 20px;
+}
+
+.button-angry-delete {
+  display: inline-block;
+  border: none;
+  padding: 10px 20px;
+  /*border-radius: 6px;*/
+  transition: background-color 0.15s, transform 0.15s;
+
+  background-color: #8B0000;
+  color: white;
+
+  clip-path: polygon(0 20%, 10% 0, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0 80%);
+}
+
+.button-angry-delete:hover {
+  background-color: #B30000;
+  transform: scale(1.05);
+}
+
+.button-angry-delete:active {
+  background-color: #660000;
+  transform: scale(0.95);
+}
+
+.large-window {
+  @apply w-[1150px] relative rounded mt-3 p-6 bg-white left-1/2 -translate-x-1/2;
+}
+
+@media (max-width: 1250px) {
+  .large-window {
+    @apply w-11/12 relative rounded mt-3 p-6 bg-white left-1/2 -translate-x-1/2;
+  }
+}
+
+.modal-background {
+  @apply scroll-auto bg-black/30 backdrop-blur-sm fixed top-0 right-0 left-0 bottom-0;
+}
+
+.table-white-gray {
+  @apply table w-full overflow-x-clip rounded-xl;
+}
+
+.table-white-gray td {
+  @apply break-words px-3 align-middle text-center;
+  overflow-wrap: anywhere;
+}
+
+.table-white-gray th {
+  @apply px-3 py-3 align-middle text-center;
+}
+
+.action-buttons {
+  @apply flex flex-row items-center justify-around;
+}
+
+@media (max-width: 650px) {
+  .action-buttons {
+    @apply flex-col;
+  }
+
+  .table-white-gray {
+    font-size: 14px;
+  }
+
+  .table-white-gray td {
+    @apply px-1;
+  }
+
+  .table-white-gray th {
+    @apply px-1;
+    font-size: 14px;
+  }
+}
+
+.modal-window-yahor {
+  @apply w-[500px] absolute rounded top-16 p-6 bg-white left-1/2 -translate-x-1/2;
+}
+
+@media (max-width: 535px) {
+  .modal-window-yahor {
+    @apply w-11/12;
+  }
+}
+
+h1 {
+  @apply break-words;
+  overflow-wrap: anywhere;
+}
+
+h2 {
+  @apply break-words;
+  overflow-wrap: anywhere;
+}
+
+span {
+  @apply break-words;
+  overflow-wrap: anywhere;
+}
+
+p {
+  @apply break-words;
+  overflow-wrap: anywhere;
+}
